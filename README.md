@@ -30,6 +30,18 @@ pw usermod freebsd -s /bin/sh
 Examples
 ----------------
 
+1) Install from Ansible Galaxy https://galaxy.ansible.com/
+
+```
+ansible-galaxy install vbotka.ansible-do-freebsd-bash
+- downloading role 'ansible-do-freebsd-bash', owned by vbotka
+- downloading role from https://github.com/vbotka/ansible-do-freebsd-bash/archive/master.tar.gz
+- extracting vbotka.ansible-do-freebsd-bash to /home/vlado/.ansible/roles/vbotka.ansible-do-freebsd-bash
+- vbotka.ansible-do-freebsd-bash was installed successfully
+```
+
+2) Edit inventory
+
 ```
 hosts
 
@@ -43,26 +55,31 @@ ansible_python_interpreter=/usr/local/bin/python2
 ansible_perl_interpreter=/usr/local/bin/perl
 ```
 
+3) Edit playbook
+
 ```
 cat ~/.ansible/playbooks/do-freebsd-bash.yml
 ---
 - hosts: do-bsd-test
 roles:
-      - role: do-freebsd-bash
+      - role: vbotka.ansible-do-freebsd-bash
 ```
+
+4) Run playbook
 
 ```
 ansible-playbook ~/.ansible/playbooks/do-freebsd-bash.yml
+
 PLAY ***************************************************************************
 TASK [setup] *******************************************************************
 ok: [139.59.214.27]
-TASK [do-freebsd-bash : include] ***********************************************
-included: /home/vlado/.ansible/roles/do-freebsd-bash/tasks/packages.yml for 139.59.214.27
-TASK [do-freebsd-bash : Install base packages] *********************************
+TASK [vbotka.ansible-do-freebsd-bash : include] ********************************
+included: /home/vlado/.ansible/roles/vbotka.ansible-do-freebsd-bash/tasks/packages.yml for 139.59.214.27
+TASK [vbotka.ansible-do-freebsd-bash : Install base packages] ******************
 changed: [139.59.214.27]
-TASK [do-freebsd-bash : include] ***********************************************
-included: /home/vlado/.ansible/roles/do-freebsd-bash/tasks/shell.yml for 139.59.214.27
-TASK [do-freebsd-bash : change default shell to bash for user freebsd] *********
+TASK [vbotka.ansible-do-freebsd-bash : include] ********************************
+included: /export/home/vlado.config/.ansible/roles/vbotka.ansible-do-freebsd-bash/tasks/shell.yml for 139.59.214.27
+TASK [vbotka.ansible-do-freebsd-bash : change default shell to bash for user freebsd] ***
 changed: [139.59.214.27]
 PLAY RECAP *********************************************************************
 139.59.214.27              : ok=5    changed=2    unreachable=0    failed=0
