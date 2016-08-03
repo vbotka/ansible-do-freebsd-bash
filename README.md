@@ -23,12 +23,14 @@ Requirements
 Before applying this role it's necessary to change the default shell
 for user freebsd to /bin/sh.
 
+```
 pw usermod freebsd -s /bin/sh
-
+```
 
 Examples
 ----------------
 
+```
 hosts
 
 [do-bsd-test]
@@ -39,15 +41,18 @@ ansible_connection=ssh
 ansible_user=freebsd
 ansible_python_interpreter=/usr/local/bin/python2
 ansible_perl_interpreter=/usr/local/bin/perl
+```
 
-
-> cat ~/.ansible/playbooks/do-freebsd-bash.yml
+```
+cat ~/.ansible/playbooks/do-freebsd-bash.yml
 ---
 - hosts: do-bsd-test
-  roles:
-        - role: do-freebsd-bash
+roles:
+      - role: do-freebsd-bash
+```
 
-> ansible-playbook ~/.ansible/playbooks/do-freebsd-bash.yml
+```
+ansible-playbook ~/.ansible/playbooks/do-freebsd-bash.yml
 PLAY ***************************************************************************
 TASK [setup] *******************************************************************
 ok: [139.59.214.27]
@@ -61,7 +66,7 @@ TASK [do-freebsd-bash : change default shell to bash for user freebsd] *********
 changed: [139.59.214.27]
 PLAY RECAP *********************************************************************
 139.59.214.27              : ok=5    changed=2    unreachable=0    failed=0
-
+```
 
 License
 -------
