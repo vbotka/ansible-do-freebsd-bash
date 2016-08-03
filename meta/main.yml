@@ -1,0 +1,13 @@
+galaxy_info:
+  author: Vladimir Botka
+  description: Install bash and change the shell to bash for the user freebsd.
+  company: https://botka.link
+  license: BSD
+  min_ansible_version: 1.2
+  platforms:
+  - name: FreeBSD
+    versions:
+    - all
+  categories:
+  - system
+dependencies: []

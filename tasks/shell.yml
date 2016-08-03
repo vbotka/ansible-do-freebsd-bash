@@ -1,0 +1,4 @@
+- name: change default shell to bash for user freebsd
+  command: pw usermod freebsd -s /usr/local/bin/bash
+  become: yes
+  become_method: sudo

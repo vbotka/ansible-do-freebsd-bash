@@ -1,0 +1,6 @@
+
+- name: Install base packages
+  pkgng: name=bash state=present
+  become: yes
+  become_method: sudo
+  

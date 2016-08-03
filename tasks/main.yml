@@ -1,0 +1,7 @@
+---
+# tasks file for do-freebsd-bash
+- include: packages.yml
+  tags: bootstrap_packages
+
+- include: shell.yml
+  tags: bootstrap_shell
