@@ -94,4 +94,4 @@ BSD
 Author Information
 ------------------
 
-https://botka.link
+Vladimir Botka https://botka.link
