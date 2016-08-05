@@ -7,11 +7,11 @@ for user freebsd to bash (pw usermod freebsd -s /usr/local/bin/bash)
 Default shell in FreeBSD is /bin/tcsh. This doesn't work properly with
 ansible as discussed in issues:
 
-fatal error caused by shell type
-https://github.com/ansible/ansible/issues/13459
+- [fatal error caused by shell type]
+(https://github.com/ansible/ansible/issues/13459)
 
-ansible_shell_type and make_become_cmd are at odds
-https://github.com/ansible/ansible/issues/13179
+- [ansible_shell_type and make_become_cmd are at odds]
+(https://github.com/ansible/ansible/issues/13179)
 
 This role was tested with fresh droplet 10.3-RELEASE FreeBSD at
 https://cloud.digitalocean.com.
