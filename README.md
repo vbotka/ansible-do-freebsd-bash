@@ -1,10 +1,10 @@
 do-freebsd-bash
 ===============
 
-This role installs /usr/local/bin/bash and changes the default shell
+This role installs /usr/local/bin/bash and changes the login shell
 for user freebsd to bash (pw usermod freebsd -s /usr/local/bin/bash)
 
-Default shell in FreeBSD is /bin/tcsh. This doesn't work properly with
+Default login shell in FreeBSD is /bin/tcsh. This doesn't work properly with
 ansible as discussed in issues:
 
 - [fatal error caused by shell type]
@@ -20,7 +20,7 @@ https://cloud.digitalocean.com.
 Requirements
 ------------
 
-Before applying this role it's necessary to change the default shell
+Before applying this role it's necessary to change the login shell
 for user freebsd to /bin/sh.
 
 ```
