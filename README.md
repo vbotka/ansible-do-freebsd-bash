@@ -55,7 +55,14 @@ ansible_python_interpreter=/usr/local/bin/python2
 ansible_perl_interpreter=/usr/local/bin/perl
 ```
 
-3) Edit playbook
+3) Change shell (if necessary)
+
+```
+ansible do-bsd-test -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
+139.59.214.27 | SUCCESS | rc=0 >>
+```
+
+4) Edit playbook
 
 ```
 cat ~/.ansible/playbooks/do-freebsd-bash.yml
@@ -65,7 +72,7 @@ roles:
       - role: vbotka.ansible-do-freebsd-bash
 ```
 
-4) Run playbook
+5) Run playbook
 
 ```
 ansible-playbook ~/.ansible/playbooks/do-freebsd-bash.yml
