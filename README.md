@@ -5,7 +5,7 @@ This role installs /usr/local/bin/bash and changes the default shell
 for user freebsd to bash (pw usermod freebsd -s /usr/local/bin/bash)
 
 Default shell in FreeBSD is /bin/tcsh. This doesn't work properly with
-ansible as discussed in bugs:
+ansible as discussed in issues:
 
 fatal error caused by shell type
 https://github.com/ansible/ansible/issues/13459
