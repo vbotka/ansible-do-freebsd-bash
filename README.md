@@ -24,7 +24,7 @@ Before applying this role it's necessary to change the login shell
 for user freebsd to /bin/sh.
 
 ```
-pw usermod freebsd -s /bin/sh
+ansible do-bsd-test -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
 ```
 
 Examples
