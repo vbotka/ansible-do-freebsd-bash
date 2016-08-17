@@ -1,2 +1,3 @@
 ---
 # defaults file for do-freebsd-bash
+do_freebsd_bash_user: "freebsd"

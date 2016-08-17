@@ -1,6 +1,6 @@
 galaxy_info:
   author: Vladimir Botka
-  description: Install bash and change the shell to bash for the user freebsd.
+  description: Install bash and change login shell to bash for the specified user.
   company: https://botka.link
   license: BSD
   min_ansible_version: 1.2

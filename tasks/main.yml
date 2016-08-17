@@ -1,7 +1,8 @@
 ---
+
 # tasks file for do-freebsd-bash
 - include: packages.yml
-  tags: bootstrap_packages
+  tags: packages
 
 - include: shell.yml
-  tags: bootstrap_shell
+  tags: configure_login_shell
